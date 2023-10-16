@@ -1,0 +1,31 @@
+Layer Type,Output Size,Number of Filters / Channels,Kernel Size,Stride,Activation
+Input Image,"448x448x3",,,
+Convolution,"448x448x64",64,"7x7",2,"Leaky ReLU"
+Max Pooling,"224x224x64",,2x2,2,
+Convolution,"224x224x192",192,"3x3",1,"Leaky ReLU"
+Max Pooling,"112x112x192",,2x2,2,
+Convolution,"112x112x128",128,"1x1",1,"Leaky ReLU"
+Convolution,"112x112x256",256,"3x3",1,"Leaky ReLU"
+Convolution,"112x112x256",256,"1x1",1,"Leaky ReLU"
+Convolution,"112x112x512",512,"3x3",1,"Leaky ReLU"
+Max Pooling,"56x56x512",,2x2,2,
+Convolution,"56x56x256",256,"1x1",1,"Leaky ReLU"
+Convolution,"56x56x512",512,"3x3",1,"Leaky ReLU"
+Convolution,"56x56x256",256,"1x1",1,"Leaky ReLU"
+Convolution,"56x56x512",512,"3x3",1,"Leaky ReLU"
+Convolution,"56x56x256",256,"1x1",1,"Leaky ReLU"
+Convolution,"56x56x512",512,"3x3",1,"Leaky ReLU"
+Convolution,"56x56x256",256,"1x1",1,"Leaky ReLU"
+Convolution,"56x56x512",512,"3x3",1,"Leaky ReLU"
+Convolution,"56x56x512",512,"3x3",1,"Leaky ReLU"
+Convolution,"28x28x512",512,"3x3",2,"Leaky ReLU"
+Convolution,"28x28x1024",1024,"3x3",1,"Leaky ReLU"
+Convolution,"28x28x512",512,"1x1",1,"Leaky ReLU"
+Convolution,"28x28x1024",1024,"3x3",1,"Leaky ReLU"
+Convolution,"28x28x1024",1024,"3x3",1,"Leaky ReLU"
+Convolution,"14x14x1024",1024,"3x3",2,"Leaky ReLU"
+Convolution,"14x14x1024",1024,"3x3",1,"Leaky ReLU"
+Convolution,"14x14x1024",1024,"3x3",1,"Leaky ReLU"
+Fully Connected,4096,,
+Fully Connected,1470,,
+Detection,"7x7x30",,,,,
